@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="main-app" style="margin-top: 30px;">
+        <div class="wrapper">
+            <div class="navigation">
+                <h3 class="school-name school_info" id="school_name">Wanyeki <span> boys</span></h3>
+                <ul class="selectors">
+                    <div class="selector active"id="home">
+                        <li>
+                            <div class="nav-link" >
+                                <img src="../assets/images/home.png" alt="" class="icon">
+                                <h4 class="nav-text">Home</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector"id="results">
+                        <li>
+                            <div class="nav-link" >
+                                <img src="../assets/images/icons8_scorecard_50px_1.png" alt="" class="icon">
+                                <h4 class="nav-text">Results</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector"id="students">
+                        <li>
+                            <div class="nav-link" >
+                                <img src="../assets/images/icons8_schoolboy_at_a_desk_50px.png" alt="" class="icon">
+                                <h4 class="nav-text">Students</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector"id="teachers">
+                        <li>
+                            <div class="nav-link" >
+                                <img src="../assets/images/icons8_classroom_50px.png" alt="" class="icon">
+                                <h4 class="nav-text">Teachers</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector" id="timetables">
+                        <li>
+                            <div class="nav-link">
+                                <img src="../assets/images/icons8_timetable_50px.png" alt="" class="icon">
+                                <h4 class="nav-text">Timetables</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector"id="report-cards">
+                        <li>
+                            <div class="nav-link" >
+                                <img src="../assets/images/icons8_report_card_50px.png" alt="" class="icon">
+                                <h4 class="nav-text">Report Cards</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector" id="perfomance">
+                        <li>
+                            <div class="nav-link">
+                                <img src="../assets/images/icons8_statistics_50px.png" alt="" class="icon">
+                                <h4 class="nav-text">Perfomance</h4>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="selector"id="form1-enrollment">
+                        <li>
+                            <div class="nav-link" >
+                                <img src="../assets/images/icons8_add_user_group_man_man_50px.png" alt="" class="icon">
+                                <h4 class="nav-text">Form1 Enrollment</h4>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="tabs">
+                <div class="tab-bar">
+                    <div class="tab-bar-items">
+                        <div class="school-name term" style="text-transform: capitalize; ">No term registered</div>
+                        <div class="feedback">
+                          <div class="f-text" style="margin-top: 7px;">Success</div> 
+                        </div>
+                        <div class="left" style="cursor: pointer;">
+                        <img src="../assets/images/my logo.png" alt="" class="user">
+                        <h5 class="logout">Logout <span class="top-username">Francis</span></h5>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-windows">
+                    <div class="home animated window">
+                      <div class="home-content">
+                          <div class="home-left">
+                              <div class="left-top">
+                                  <div class="today"><span class="day">Mon </span><span class="date">17</span> <span class="month">June</span><span class="year">1998</span></div>
+                                <div class="title">Teachers on duty</div>
+                                  <!-- <ol class="ondutys">
+                                      <li class="onduty">Mr kelvin mwangi</li>
+                                      <li class="onduty">Mrs Juma Moses</li>
+                                  </ol> -->
+                              </div>
+                                <div class="btn outline tod" style="margin-bottom: 40px; margin-left: 70px;">Teachers on duty</div>
+                              <div class="left-bottom">
+                                <div class="title">Actions</div>
+                                <p class="status danger">
+                                    No term running..
+                                </p>
+                                <button disabled class="btn-danger btn terminate disabled">Terminate This Term</button>
+                                <br>
+                                <button class="btn-primary btn start" >Start New Term</button>
+                              </div>
+                          </div>
+                          <div class="home-right">
+                            <div class="title">Actions wizards</div>
+                              <div class="wizards animated" style="margin-top: 100px;">
+                                  <div class="terminate-wizard">
+                                      <div class="title">terminate Wizard</div>
+                                      <p class="helper-text">
+                                          You are about to terminate
+                                          <span class="term-field"></span>(current term).
+                                          This is if the term and all its activities are  over.
+
+
+                                          
+                                      </p>
+                                <button class="btn-primary btn continue-terminate" >Teminate</button>
+                                <button class="btn-danger btn cancel">Cancel</button>
+
+                                  </div>
+                                  <div class="start-wizard">
+                                      <div class="wizard-tabs">
+                                          <div class="wizard-tab repeaters animated" id="timetable">
+                                             <div class="title"> Select Term</div>
+                                             <p class="helper-text">
+                                                 select a term to register then press next
+                                             </p>
+                                            <div class="select-term">
+                                                <select class="term-selector x-selector" name="" id="" style="font-size: 15px;width: 200px;height: 30px;">
+                                                    <option value="">francis</option>
+                                                </select>
+                                            </div>
+                                            <button class=" outline btn next register-next" >Next</button>
+                                            <button class="btn-danger btn cancel">Back</button>
+                                            
+                                            </div>
+                                          <div class="wizard-tab timetable animated"id="finish" >
+                                              <div class="title">Confirm</div>
+                                              <div class="helper-text">
+                                                 You have selected to register for <br> <span class="selected_term"></span> <br>
+                                                 <div class="term-1-text error">
+                                                     Since this is a Term 1. Migrate students to the next class?
+                                                     <input type="checkbox" name=""  id="">
+                                                 </div>
+
+                                              </div>
+                                              <button class="outline btn register-term">Register</button>
+                                              <button class="btn-danger btn cancel">Back</button>
+                                              <!-- <button class="btn-primary btn generate-tt1">Generate</button>
+                                              
+                                            <button class="btn-primary outline btn next " >Next</button> -->
+
+                                            </div>
+                                          <div class="wizard-tab finish animated">
+                                              <div class="title">Finish</div>
+                                              <div class="helper-text">
+                                                  Confirm Your slelection
+                                              </div>
+                                              <ol class="selections">
+                                                  <li>selected <span>Term-1</span></li>
+                                                  <li>generate Timetable</li>
+
+                                              </ol>
+                                              <button class="btn-danger btn cancel">Cancel</button>
+                                              <button class="btn-success btn ">Finish</button>
+                                          </div>
+                                          
+                                      </div>
+                                  </div>
+                                  <div class="about">
+                                      <div class="numbers">
+                                          <div class="wrp">
+                                          <h1 id="students-n" class=" count">
+                                              750
+                                          </h1>students</div>
+                                          <div class="wrp">
+                                          <h1 id="teachers-n"class=" count">
+                                            30
+                                        </h1>teachers</div>
+                                      </div>
+                                      <button class="btn-primary btn chg-psd">Change password</button>
+                                <br>
+                                <button class="btn-danger btn new-user " >new User</button>
+                                <br>
+                                <button class="outline btn open-settings" >
+                                    <div class="icon-btn" style="display: flex; justify-content: center;">
+                                        <div class="btn-text" >settings</div>
+                                    </div>
+                                </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="results animated window">
+                        <div class="entry-form" style="margin:auto; margin-top:80px;">
+                            <div class="entry-tabs">
+                                <div class="add-entry-tab entry-tab animated">
+                                   <div class="title">Results</div>
+                                   <div class="helper-text">Select exam.You can only insert for registered exams</div>
+                                    <div class="error">Select exam first!</div>
+                                    <select class="x-selector registered-exams-selector">
+                                    <option value="">Select exam</option>
+                                    
+                                    
+                                </select>
+                                   <button class="tab-btn btn-primary open-insert">Insert marks</button>
+                                   <button class="btn outline change-entry register-exams">Register exams</button>
+                                   <button class="btn btn-danger">Clear</button>
+                                </div>
+                                <div class="update-entry-tab entry-tab animated">
+                                   <div class="title">Select Exam to register</div>
+                                   <div class="helper-text" style="margin-top: 10px;">
+                                    select an exam to register/Update
+                                   </div>
+                                   <div class="error">Select an exam first!</div>
+                                   <select class="x-selector exam-selector"name="" id="" style="font-size: 15px;width: 200px;height: 30px;">
+                                    <option value="">Select exam </option>
+                                    <option value="Opener term-3-2020">Opener Term-3-2020</option>
+                                    <option value="Mid term-3-2020">Mid Term-3-2020</option>
+                                    <option value="End term-3-2020">End Term-3-2020</option>
+                                    
+                                </select>
+                                   <button class="btn btn-primary open-exams" id="register">Register/Modify</button>
+                                   <button class="btn btn-danger cancel-entry">Back</button>
+                                </div>
+                                <div class="bulk-entry-tab entry-tab animated">
+                                    <div class="title">Upload Students</div>
+                                    <div class="helper-text">
+                                        The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                        Please don't edit the sample
+                                    </div>
+                                    <div class="error">Please enter next terms fees</div>
+                                    <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                    <br><br>
+                                   
+                                     <button class="btn btn-primary pick-file">Pick an Excel file</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="students animated window">
+                        <div class="results-content">
+                            <div class="tab-left">
+                                <div class="x-selectors">
+                                <div class="search">
+                                    <img src="../assets/images/icons8_search_50px.png" alt="" class="search-icon">
+                                    <input type="text" id="search-student" placeholder="search student">
+                                </div>
+                                <select class="x-selector top-form-selector"name="" id="">
+                                 <option value="form-1">Form 1</option>
+                                 <option value="form-2">form 2</option>
+                                 <option value="form-3">form 3</option>
+                                 <option value="form-4">form 4</option>
+                                
+                             </select>
+                             <select class="x-selector top-class-selector"name="" id="stream-selector">
+                                 <option value="">south</option>
+                                 <option value="">north</option>
+                                
+                             </select>
+                            </div> 
+                         
+                         <div class="table-part">
+                             <div class="title students-title" style="text-align: center;">select a class above</div>
+                         <div class="entry-table">
+                              <table>
+                                  <thead>
+                                      <tr><th>Adm</th><th>First Name</th><th>middle Name</th><th>Parent</th><th>Gender</th></tr>
+                                  </thead>
+                                 <tbody class="students-table">
+
+                                 </tbody>
+                                 
+                                 
+                             </table>
+                             
+                         </div><div class="action-buttons">
+                                 <button disabled class="tab-btn btn-danger delete-entry disabled">delete</button>
+                                 <button disabled class="tab-btn btn-danger print_class_list disabled">print class list</button>
+                                 <button disabled class="tab-btn btn-primary disabled change-entry">Edit</button>
+                             </div>
+                         </div>
+                         <div class="table_count"> count: <span class="count_value">0</span></div>
+                         </div>
+                            <div class="tab-right">
+                                <div class="rn"><div class="lv"><div class="cc">
+                             <button class="btn btn-danger  open-selections">Subject selections </button>
+
+                             <select class="x-selector entry-mode"name="" id="">
+                                 <option value="1">One by One</option>
+                                 <option value="2">Excel file</option>
+                                
+                             </select>
+                             
+                            </div></div></div>
+                             <div class="entry-form" style="height: 460px;">
+                                 <div class="entry-tabs">
+                                     <div class="add-entry-tab entry-tab animated">
+                                         <div class="title">Add students</div>
+                                         <div class="error">Some fields are blank</div>
+                                         <div class="inputs mar-0">
+                                             <label for="auto-adm">auto</label>
+                                         <input type="checkbox"id="auto-adm" class="adm-check">
+                                         <input type="text" placeholder="ADM" class="mar-0 adm-field">
+                                         <input type="text" class="clearable" placeholder="first Name">
+                                         <input type="text" class="clearable" placeholder="Middle Name">
+                                         <input type="text" class="clearable" placeholder="Last Name">
+                                         <input type="text" class="clearable" placeholder="DOB(yyyy-mm-dd)">
+                                         <input type="text" class="clearable" placeholder="Parent Phone" >
+                                        <input type="text" class="clearable" placeholder="KCPE" class="mar-0b"> <br> 
+                                        male
+                                        <input class="male" value="male" type="radio" name="gender" id="">
+                                        female
+                                        <input class="female" value="female" type="radio" name="gender" id=""><br>
+                                         
+                                         </div>
+                                         <button disabled class="tab-btn btn-primary disabled save-student">save</button>
+                                         <button disabled class="tab-btn btn-danger disabled cancel-entry">cancel</button>
+                                     </div>
+                                     <div class="update-entry-tab entry-tab animated">
+                                        <div class="title edit-title">Edit 5697</div>
+                                        <div class="error">Some fields are blank</div>
+                                        <div class="inputs mar-0">
+                                        <input type="text" class="student-input" placeholder="first Name">
+                                        <input type="text" class="student-input" placeholder="Middle Name">
+                                        <input type="text" class="student-input" placeholder="Last Name">
+                                        <input type="text" class="student-input" placeholder="DOB">
+                                        <input type="text" class="student-input" placeholder="Parent Phone" class="mar-0b" ><br>
+                                        male
+                                        <input type="radio" value="male" class="male" name="gender" id="">
+                                        female
+                                        <input type="radio" value="female" class="female" name="gender" id=""><br><br>
+                                       <select class="x-selector student-input mar-0 paper"name="" id="stream-selector">   
+                                       </select>
+                                        </div>
+                                        <button disabled class="tab-btn btn-primary disabled update-student">Update</button>
+                                        <button disabled class="tab-btn btn-danger disabled cancel-entry">cancel</button>
+                                     </div>
+                                     <div class="bulk-entry-tab entry-tab animated">
+                                        <div class="title">Upload Students</div>
+                                        <div class="helper-text">
+                                            The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                            Please don't edit the sample
+                                        </div>
+                                        <div class="error">Please enter next terms fees</div>
+                                        <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                        <br><br>
+                                       
+                                         <button class="btn btn-primary pick-file">Pick an Excel file</button>
+                                     </div>
+                                 </div>
+                             </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="teachers animated window">
+                        <div class="results-content">
+                            <div class="tab-left">
+                                <div class="x-selectors">
+                                <select class="x-selector subjects-selector top-subject-selector"name="" id="">
+                                    <option value="all"> All</option>
+                                </select>
+                                <button class="btn outline open-subjects" style="margin-top: 20px;">Teachers & subjects</button>
+                            </div> 
+                         
+                         <div class="table-part">
+                             <div class="title" style="text-align: center;">Teachers</div>
+                         <div class="entry-table">
+                              <table>
+                                  <thead>
+                                      <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th><th>Phone</th></tr>
+                                 </thead>
+                                 <tbody></tbody>
+                             </table>
+                             
+                         </div><div class="action-buttons">
+                                 <button class="tab-btn btn-danger delete-entry">delete</button>
+                                 <button class="tab-btn btn-danger open-subjects">classes taught</button>
+                                 <button class="tab-btn btn-primary change-entry">Edit</button>
+                             </div>
+                         </div>
+                         <div class="table_count"> count: <span class="count_value">0</span></div>
+                         </div>
+                            <div class="tab-right">
+                                <button class="btn btn-primary open-subjects" style="margin-top: 20px;">Teachers & classes</button>
+                             
+                             <div class="entry-form">
+                                 <div class="entry-tabs">
+                                     <div class="add-entry-tab entry-tab animated">
+                                        <div class="title">Add Teacher</div>
+                                        <div class="error">Some fields are blank</div>
+                                        <div class="inputs mar-10">
+                                        <input type="text" class="teacher-input" placeholder="National Id" class="">
+                                        <input type="text" class="teacher-input" placeholder="first Name">
+                                        <input type="text" class="teacher-input" placeholder="Last Name">
+                                        <input type="text" class="teacher-input" placeholder="Title eg Mr kamau">
+                                        <input type="text" class="teacher-input" placeholder="DOB">
+                                        <input type="text" class="teacher-input" placeholder="Phone" style="margin-bottom: 7px;"><br>
+                                       
+                                        <select class="x-selector subjects-selector teacher-input mar-0 paper"name="" id="">
+                                            <option value="">Select subject1</option>
+                                            
+                                           
+                                        </select>
+                                        <select class="x-selector subjects-selector teacher-input mar-0 paper"name="" id="">
+                                            <option value="">Select subject2</option>
+                                            
+                                           
+                                        </select>
+                                        </div>
+                                        <button class="tab-btn btn-primary save-teacher">save</button>
+                                        <button class="tab-btn btn-danger cancel-entry">cancel</button>
+                                     </div>
+                                     <div class="update-entry-tab entry-tab animated">
+                                        <div class="title edit-title">Edit Mr Wanyeki</div>
+                                        <div class="error">Some fields are blank</div>
+                                        <div class="inputs mar-10">
+                                        <input type="text" class="teacher-input" placeholder="first Name">
+                                        <input type="text" class="teacher-input" placeholder="Last Name">
+                                        <input type="text" class="teacher-input" placeholder="Title eg Mr kamau">
+                                        <input type="text" class="teacher-input" placeholder="DOB">
+                                        <input type="text" class="teacher-input" placeholder="Phone" class="mar-0b"><br>
+                                        <select class="x-selector subjects-selector mar-10 teacher-input"name="" id="">
+                                        </select>
+                                        <select class="x-selector subjects-selector mar-10 teacher-input"name="" id="">
+                                           
+                                        </select>
+                                        </div>
+                                        <button class="tab-btn btn-primary update-teacher">Update</button>
+                                        <button class="tab-btn btn-danger cancel-entry">cancel</button>
+                                     </div>
+                                     <div class="bulk-entry-tab entry-tab animated">
+                                         <div class="title">chemistry-pp1 form-1 south </div>
+                                         <div class="helper-text">
+                                             the upload file Must be in <span class="excell-format">the sample's</span>  format
+                                         </div>
+                                         <button class="tab-btn btn-success">Excel sample example</button>
+                                         <br><br>
+                                          <button class="tab-btn btn-primary">pick pre-filled excell</button><br>
+                                         <button class="btn btn-danger cancel-entry">cancel</button>
+ 
+                                     </div>
+                                 </div>
+                             </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="timetables animated window">
+                        <div class="timetable-content">
+                            <div class="tt-wizards">
+                                <div class="rn"><div class="lv"><div class="cc">
+   
+                                    <select class="x-selector entry-mode " style="display: none;"name="" id="">
+                                        <option value="1">One by One</option>
+                                        <option value="2">Excel file</option>
+                                       
+                                    </select>
+                                    
+                                   </div></div></div>
+                                <div class="entry-form" style="margin-top: 80px;">
+                                    <div class="entry-tabs">
+                                        <div class="add-entry-tab entry-tab animated">
+                                           <div class="title">Timetables</div>
+                                           <div class="helper-text">Generate time-tables for this term</div>
+                                           <button class="btn btn-primary change-entry">Generate</button>
+                                           <button class="btn outline view-tt">View/print</button>
+                                           <button class="btn btn-danger">Clear</button>
+                                        </div>
+                                        <div class="update-entry-tab entry-tab animated">
+                                           <div class="title">Select timetable to generate</div>
+                                           <div class="helper-text" style="margin-top: 10px;">
+                                             Ensure all configurations are correct.
+
+                                           </div>
+                                           <button class="btn btn-primary  gen_teaching_tt">Teaching timetable</button>
+                                           <button class="btn btn-primary  gen_exam_tt">Exam timetable</button>
+                                           <button class="btn btn-primary  gen_onduty_tt">Teachers on duty</button>
+                                           <button class="btn btn-danger cancel-entry">Back</button>
+                                        </div>
+                                        <div class="bulk-entry-tab entry-tab animated">
+                                            <div class="title">Select exam</div>
+                                            <div class="helper-text">
+                                                Make sure the exam and its papers is registered correctly <span class="open-register">here</span>
+                                            </div>
+                                            <div class="error">Select an exam</div>
+                                            <select name="" id="" class="x-selector registered-exams-selector"></select>
+                                            <br><br>
+                                             <button class="btn btn-primary generate-exam">Generate</button><br>
+                                            <button class="btn btn-danger cancel-entry">cancel</button>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tt-view">
+                                <div class="tt-selectors">
+                                <select class="x-selector tt-type"name="" id="">
+                                    <option value="1">Teaching timetable</option>
+                                    <option value="2">Exam timetable</option>
+                                    <option value="3">Teachers On duty</option>
+                                    
+                                </select>
+                                <select class="x-selector tt-type2"name="" id="">
+                                    <option value="1">Class</option>
+                                    <option value="2">Teacher's</option>
+                                    
+                                </select>
+                                <select class="x-selector tt-teacher"name="" id="">
+                                   
+                                </select>
+                                <span class="class-selector">
+                                <select class="x-selector tt-form"name="" id="">
+                                    <option value="form-1">Form 1</option>
+                                    <option value="form-2">form 2</option>
+                                    <option value="form-3">Form 3</option>
+                                    <option value="form-4">form 4</option>
+                                    
+                                </select>
+                                <select class="x-selector tt-class stream-selector"name="" id="stream-selector">
+                                    <option value="eng">south</option>
+                                    <option value="eng">North</option>
+                                    
+                                </select></span>
+                            </div>
+                                <div class="table-view">
+                                    <div class="tt-tables">
+                                        <div class="teaching-tt tt-tab">
+                                            <table>
+                                                <thead>
+                                                    <tr class="title-row" style="font-size: smaller;"><th>day</th><th>08.00-08.40am</th><th>08.40-09.20am</th><th>brk</th><th>09.35-10.15am</th><th>10.15-10.55am</th><th>brk</th><th>11.25-12.05pm</th><th>12.05-12.45pm</th><th>lch</th><th>14.00-14.40pm</th><th>14.40-15.20pm</th><th>15.20-16.00pm</th></tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                        <div class="exam-tt tt-tab">
+                                            <table>
+                                                <thead>
+                                                     <tr class="title-row"><th>day</th><th>Morning</th> <th>Mid-Morning</th> <th>Afternoon</th></tr>
+                                               </thead>
+                                                <tbody></tbody>
+                                                
+                                            </table>
+                                        </div>
+                                        <div class="onduty-tt tt-tab">
+                                                <table>
+                                                    <thead>
+                                                <tr class="title-row"><th>week 1</th><th>week 2</th><th>week 3</th><th>week 4</th><th>Week 5</th><th>week 6</th><th>week 7</th><th>week 8</th><th>week 9</th><th>week 10</th><th>week 11</th><th>week 12</th></tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="action-buttons">
+                                        
+                                        <button class="tab-btn btn-danger print-tt">Print This</button>
+                                        <button class="tab-btn btn-primary cancel-view">Back</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-cards animated window">
+                        <div class="report-card-content">
+                            
+                            <div class="report-wizards">
+                            <div class="rn"><div class="lv"><div class="cc">
+   
+                                <select class="x-selector entry-mode " style="display: none;"name="" id="">
+                                    <option value="1">One by One</option>
+                                    <option value="2">Excel file</option>
+                                   
+                                </select>
+                                
+                               </div></div></div>
+                                <div class="entry-form" style="margin-top: 80px;">
+                                    <div class="entry-tabs">
+                                        <div class="add-entry-tab entry-tab animated">
+                                           <div class="title">Report Cards</div>
+                                           <div class="helper-text" style="padding: 0;">Generate Reportcards? <br>
+                                        Ensure the fee Balances are uploaded and remarks set before proceeding </div>
+                                           <button class="btn btn-primary change-entry gnrtrp">Generate & print All</button>
+                                           <button class="btn outline view-report">Individual report</button>
+                                           <button class="btn btn-danger open-remarks">Auto Remarks</button>
+                                           <button class="btn btn-primary balance-upload">Upload balances</button>
+                                        </div>
+                                        <div class="update-entry-tab entry-tab animated">
+                                           <div class="title">Select Class</div>
+                                          
+                                           <div class="helper-text" style="margin-top: 10px;">
+                                               Before generating ensure all exams are filled correctly <span class="open-term-results">here</span>.
+                                           </div>
+                                           <div class="error">Select a class</div>
+                                           <select name=""  class=" x-selector select-term" >
+                                            
+                                           </select> <br>
+                                           <select class="x-selector report-form"name="" id="">
+                                            <option value="form-1">Form 1</option>
+                                            <option value="form-2">Form 2</option>
+                                            <option value="form-3">Form 3</option>
+                                            <option value="form-4">Form 4</option>
+                                            
+                                        </select>
+                                        <select class="x-selector report-stream"name="" id="stream-selector">
+                                          
+                                        </select>
+                                           <button class="btn btn-primary generate-report">Generate & print</button>
+                                           <button class="btn btn-danger cancel-entry">cancel</button>
+                                        </div>
+                                        <div class="bulk-entry-tab entry-tab animated">
+                                            <div class="title">Upload Fee balances</div>
+                                            <div class="helper-text">
+                                                The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                                Please don't edit the sample
+                                            </div>
+                                            <div class="error">Please enter next terms fees</div>
+                                            <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                            <br><br>
+                                           
+                                             <button class="btn btn-primary pick-file">Pick an Excel file</button>
+                                            <button class="btn btn-danger cancel-entry">back</button>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="report-preview">
+                                <input type="text" class="adm_field" placeholder="Adm" style="margin-bottom: 0; margin-top: 20px; margin-left: 5%; border-radius: 0; width:100px; height: 23px;">
+                                <button class="tab-btn btn-danger print-all-reports">Print All</button>
+                                <button class="tab-btn btn-danger print_this">Print This</button>
+                                <button class="tab-btn btn-primary open-term-results">Results</button>
+                                <button class="tab-btn btn-primary cancel-report-view">Back</button>
+                                <select name=""  class=" x-selector select-term">
+                                    <option value="term-1-">Term 1</option>
+                                    <option value="term-2-">Term 2</option>
+                                    <option value="term-3-">Term 3</option>
+                                   
+                                   </select>
+                                <div class="report-view" style="width: 70%;" >
+                                    <div class="real-report" style="display:none">
+                                        <header> 
+                                            <div class="logo"> <img src="../assets/images/my logo.png" alt="vb.logo" class="logo-image"></div>
+                                            <div class="school-info" style="margin-left: 100px;">
+                                                <h1 class="school-name  school_info" id="school_name">Wanyeki Boys High School</h1>
+                                                <h4 class="motto school_info" id="school_motto">motto::IN PURSUIT OF EXELENCE</h4>
+                                                <small class="box school_info" id="school_box">P.O Box 36 Nyeri,043-30707</small><br>
+                                                <small class="email school_info" id="school_email">email: <a href="#"> wanyekifs@outlook</a></small><br>
+                                                <small class="serial-no">sn:vb456h</small>
+                                            </div>
+                                        </header>
+                                        <section class="title-section">
+                                           <h5 class="">END OF TERM REPORT: <span class="term"></span></h5>
+                                           <h5 class="title">Download time: <span class="time"></span></h5>
+                                           <h5 class="title">Student copy</h5>
+                                        </section>
+                                    <hr>
+                                        <section class="report-details">
+                                            <div class="rd-left">
+                                                <h5 class="l-title"> Name: <span class="content names"></span></h5>
+                                                <h5 class="l-title"> Class: <span class="content class">Form 3 North</span></h5>
+                                            </div>
+                                            <div class="rd-right">
+                                                <h5 class="l-title"> Admission No: <span class="content adm">5697</span></h5>
+                                                <h5 class="l-title"> Parent:<span class="content parent"></span></h5>
+                                            </div>
+                                        </section>
+                                        <section class="results-rt">
+                                            <table class="results-table-rt" >
+                                                <thead>
+                                                <tr><th rowspan="2">Subject</th><th>Opener</th><th>Mid Term</th><th>End term</th><th colspan="2">Grade/Points</th><th>Subject rank</th><th rowspan="2">comments</th><th rowspan="2">Initials</th></tr>
+                                                <tr><th>x/100</th><th>x/100</th><th>x/100</th><th>G</th><th>P</th> <th>x/total</th></tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                               
+                                                
+                                                <tr><td colspan="9">_</td></tr>
+                                                <tbody class="tt2">
+                                                    <tr><th>TOTAL</th> <th>0</th> <th>-</th> <th>0</th> <th>E</th> <th>7</th><th>192/198</th> <th colspan="2"></th></tr>
+                                                </tbody>
+                                                
+                                    
+                                            </table>
+                                    
+                                        </section>
+                                    <br>
+                                        <section class="middle">
+                                            <div class="means">
+                                                <table >
+                                                    <thead>
+                                            <tr><th>Term</th><th>Mean Points</th><th>Mean Grade</th><th>Position</th><th>Rank</th></tr>
+                                                 </thead>
+                                            <tbody class="tt3"></tbody>
+                                             <tbody class="tt4">
+                                           
+                                        </tbody>
+                                       </table>
+                                       <div class="comment">
+                                        <div class="comments">
+                                            <h4>Class teacher's comments</h4>
+                                            <br>
+                                            <i></i>
+                                            <hr>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                                            </div>
+                                         <div class="graph-sect">
+                                               <div class="graph">
+                                                <div class="terms">
+                                                    <div class="trms"></div>
+                                                    <h5 class="term kcpe">KCPE</h5>
+                                                </div>
+                                                <div class="bars">
+                                                    <div class="brs">
+                                                        
+                                                    </div>
+                                                    
+                                    
+                                                    <div class=" width width-red g_bot"> </div>
+                                    
+                                                </div>
+                                               </div>
+                                          </div>
+                                        </section>
+                                        <h5>Perfomance Track</h5>
+                                        <section class="P-track">
+                                    <table >
+                                        <tr class="cls" ><th>class</th></tr>
+                                        <tr class="yar"><th>Year/term</th></tr>
+                                        <tr class="exm"><th>Exam</th></tr>
+                                        <tr class="mg"><th>Mean/Grade</th></tr>  
+                                    
+                                    </table>
+                                        </section><br>
+                                    
+                                        <footer>
+                                            <div class="signs">
+                                                
+                                                <div class="comment">
+                                                        <div class="comments">
+                                                                <h5>Principal/Deputy comments</h5>
+                                                                <i></i><hr>
+                                                        </div>
+                                                        <div class="sign">
+                                                                <h5 class="sign">Sign</h5><br>
+                                                                <hr>
+                                                            </div>
+                                                            <div class="sign">
+                                                                    <h5 class="sign">Name</h5><br>
+                                                                    <hr>
+                                                                </div>
+                                                </div>
+                                                <div class="comment">
+                                                        <div class="comments">
+                                                                <h5>Parent/Guardian comments</h5>
+                                                                <i>Get rid of Es!</i><hr>
+                                                        </div>
+                                                        <div class="sign">
+                                                            <h5 class="sign">Sign</h5><br>
+                                                            <hr>
+                                                        </div>
+                                                        <div class="sign">
+                                                                <h5 class="sign">Name</h5><br>
+                                                                <hr>
+                                                            </div>
+                                                </div>
+                                            </div>
+                                            <div class="fees">
+                                                <table >
+                                                    <tr><th colspan="2">School Fees</th></tr>
+                                                    <tr><th>Balance</th><td class="blc">0.00</td></tr>
+                                                    <tr><th>Next Term</th><td class="nt">0.00</td></tr>
+                                                    <tr><th>Total</th><th class="tot">0.00</th></tr>
+                                                </table>
+                                            </div>
+                                        </footer><br>
+                                       <hr class="last">
+                                    
+                                    <h5 class="dates">Next Term Begins On: 27-08-2019</h5>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfomance animated window">
+                        <div class="perfomance-content">
+                            <div class="perfomance-left">
+                            <select class="x-selector form-selector-graph"name="" id="" style="font-size: 15px;width: 200px;height: 30px;">
+                                <option value="form-1">Form 1</option>
+                                <option value="form-2">Form 2</option>
+                                <option value="form-3">Form 3</option>
+                                <option value="form-4">Form 4</option>
+                            </select>
+                            <select class="x-selector registered-exams-selector"name="" >
+                                <option value="">This term</option> 
+                             </select><button class="btn btn-danger open-finalized">Exam Results</button>
+                            
+                            <div class="title" style="text-align: center;">Perfomance trend per class</div>
+                            <div class="trend-tab" id="trend-tab">
+                                
+                                <canvas height="310"  id="trend"></canvas>
+                            </div>
+                        </div>
+                        <div class="perfomance-right">
+                            <button class="btn btn-danger open-term-results">Term results</button>
+                            <div class="title" style="text-align: center;">Grade distribution (click the colors to deactivate a class)</div>
+                            
+                            <div class="count-tab" id="count-tab">
+                                <canvas height="270" id="chart" width="300"></canvas>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="form1-enrollment animated window">
+                        <div class="results-content">
+                            <div class="tab-left">
+                                <div class="x-selectors">
+                              <div class="title">This is a temporary storage .To save all permanently click commit below</div>
+                            </div> 
+                         
+                         <div class="table-part">
+                             <div class="title" style="text-align: center;">Form 1</div>
+                         <div class="entry-table">
+                              <table>
+                                  <thead>
+                                 <tr><th>Adm</th><th>First Name</th><th>middle Name</th><th>Parent</th><th>KCPE</th></tr>
+                                  </thead>
+                                  <tbody></tbody>
+                             </table>
+                             
+                         </div><div class="action-buttons">
+                                 <button class="tab-btn btn-danger delete-entry">delete</button>
+                                 <button class="tab-btn btn-primary change-entry">Commit all</button>
+                             </div>
+                         </div>
+                         <div class="table_count"> count: <span class="count_value">0</span></div>
+                         </div>
+                            <div class="tab-right">
+                                <div class="rn"><div class="lv"><div class="cc">
+                             <select class="x-selector entry-mode"name="" id="">
+                                 <option value="1">One by One</option>
+                                 <option value="2">Excel file</option>
+                                
+                             </select></div></div></div>
+                             <div class="entry-form" style="height: 460px;">
+                                 <div class="entry-tabs">
+                                     <div class="add-entry-tab entry-tab animated">
+                                         <div class="title">Add students</div>
+                                         <div class="error">Some fields are blank</div>
+                                         <div class="inputs mar-0">
+                                             <label for="auto-adm">auto</label>
+                                         <input type="checkbox"id="auto-adm"  checked class="adm-check">
+                                         <input type="text"value="auto" placeholder="ADM" class="mar-0 adm-field" disabled="false">
+                                         <input type="text" placeholder="first Name" class="clear">
+                                         <input type="text" placeholder="Middle Name" class="clear">
+                                         <input type="text" placeholder="Last Name"class="clear">
+                                         <input type="text" placeholder="DOB"class="clear">
+                                         <input type="text" placeholder="KCPE"class="clear">
+                                         <input type="text" placeholder="Parent Phone" class="clear">
+                                         <br>
+                                         male
+                                         <input class="male" value="male" type="radio" name="gender" id="">
+                                         female
+                                         <input class="female" value="female" type="radio" name="gender" id=""><br>
+                                          
+                                         </div>
+                                         <button class="tab-btn btn-primary save-form1">save</button>
+                                         <button class="tab-btn btn-danger cancel-entry">cancel</button>
+                                     </div>
+                                     <div class="update-entry-tab entry-tab animated">
+                                        <div class="title">Classes</div>
+                                        <div class="helper-text">
+                                           Note.Classes will be assigned automatically
+                                        </div>
+                                        <button class="btn outline commit-form1">Continue</button>
+                                        <button class="btn btn-danger cancel-entry">Cancel</button>
+                                     </div>
+                                     <div class="bulk-entry-tab entry-tab animated">
+                                        <div class="title">Upload Students</div>
+                                        <div class="helper-text">
+                                            The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                            Please don't edit the sample
+                                        </div>
+                                        <div class="error">Please enter next terms fees</div>
+                                        <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                        <br><br>
+                                       
+                                         <button class="btn btn-primary pick-file">Pick an Excel file</button>
+                                  
+ 
+                                     </div>
+                                 </div>
+                             </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="subjects animated">
+                      <div class="subject-content">
+                          <div class="subjects-tab">
+                            <div class="results-content">
+                                <div class="tab-left">
+                                    <div class="x-selectors">
+                                    <select class="x-selector subject-form-selector"name="" id="">
+                                        <option value="form-1">Form 1</option>
+                                        <option value="form-2">Form 2</option>
+                                        <option value="form-3">Form 3</option>
+                                        <option value="form-4">Form 4</option>
+                                        
+                                    </select>
+                        <button class="btn btn-primary close-settings" style="margin-top: 20px;">Back</button>
+                        <button class="btn outline open-groups" style="margin-top: 20px;">Subject groups</button>
+
+                                </div> 
+                             
+                             <div class="table-part">
+                                 <div class="title" style="text-align: center;">Assign teachers</div>
+                             <div class="entry-table">
+                                  <table>
+                                      <thead> <tr><th colspan="2">Class Subject</th> <th>Taught by</th></tr></thead>
+                                   <tbody></tbody>
+                                   
+                                     
+                                 </table>
+                                 
+                             </div><div class="action-buttons">
+                                    <button disabled class="tab-btn btn-danger ungroup-class disabled">Ungroup</button>
+                                    <button class="tab-btn btn-danger reset_all ">Reset all</button>
+                                    <button class="tab-btn btn-danger remove-subject ">Delete subject</button>
+                                     <button class="tab-btn btn-danger remove-teacher">Remove teacher</button>
+                                     <button class="tab-btn btn-primary change-entry">Assign Teacher</button>
+                                 </div>
+                             </div>
+                             </div>
+                                <div class="tab-right">
+                                 
+                                 <div class="entry-form">
+                                     <div class="entry-tabs">
+                                         <div class="add-entry-tab entry-tab animated">
+                                            <div class="title">Assign Subjects to teachers</div>
+                                            <div class="helper-text">
+                                                Ensure all the subjects Have teachers.
+                                            </div>
+                                            <div class="title merge-title">check to merge students to one class <br>(ie to  be taught by same teacher,same time)</div>
+                                            <input type="checkbox" name="" class="merge-check" id="">
+                                             <br>
+                                             <div class="inputs">
+                                                 <div class="error">Select more than one subject and give a name</div>
+                                            <div class="selected-no" style="color:rgb(115, 115, 253);font-size: larger;"></div>
+                                            <input type="text" class="group_name" placeholder="Merge name">
+                                           </div>
+                                            <button class="btn btn-primary save-merge">merge</button>
+                                         </div>
+                                         <div class="update-entry-tab entry-tab animated">
+                                            <div class="title">Select a teacher</div>
+                                            <div class="helper-text">Dont see your teacher. Try adding one <span class="close-settings ">here</span> </div>
+                                            <div class="error">Select a teacher</div>
+                                            <div class="inputs mar-10">
+                                                <select class="x-selector teacher-type-selector">
+                                                 
+                                                </select>
+                                                <br>
+                                                <select name="" class="x-selector teacher-subject-selector" id="">
+
+                                                </select>
+                                                <br> <br>
+                                            <button class="tab-btn btn-primary save-entry">save</button>
+                                            <button class="tab-btn btn-danger cancel-entry">cancel</button>
+                                         </div>
+                                         <div class="bulk-entry-tab entry-tab animated">
+                                            <div class="title">Upload Results</div>
+                                            <div class="helper-text">
+                                                The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                                Please don't edit the sample
+                                            </div>
+                                            <div class="error">Please enter next terms fees</div>
+                                            <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                            <br><br>
+                                           
+                                             <button class="btn btn-primary pick-file">Pick an Excel file</button>
+     
+                                         </div>
+                                     </div>
+                                 </div>
+                                </div>
+                             </div>
+                          </div>
+                          
+                      </div>
+                      <div class="exams-tab">
+                        <select class="x-selector exam-form"name="" id="" style="margin-left: 20%;">
+                            <option value="form-1">Form 1</option>
+                            <option value="form-2">Form 2</option>
+                            <option value="form-3">Form 3</option>
+                            <option value="form-4">Form 4</option>
+                            
+                        </select>
+                        <button class="btn btn-primary close-settings">Back</button>
+                        <button class="btn outline open-settings">All settings</button>
+                        <div class="table-part" style="margin-left: 20%;">
+                            <div class="title " style="text-align: center;">Exams Confuguration <span style="color: rgb(40, 173, 226);" class="form-title"></span></div>
+                            
+                            <div class="entry-table exams-table">
+                                 <table>
+                                     <thead>
+                                   <tr><th colspan="2">Exam</th> <th>Paper 1</th> <th>Paper 2</th>  <th>Writing</th> <th>practical</th></tr>
+                                     </thead>
+                                     <tbody></tbody>
+                                </table>
+                                
+                            </div><div class="action-buttons">
+                                    <button class="tab-btn btn-danger">Deregister</button>
+                                    <button class="tab-btn btn-primary save-exams">Save this</button>
+                                </div>
+                            </div>
+                      </div>
+                      
+                      <div class="settings-tab"> <div class="wp">
+                          <div class="all-settings">
+                              <div class="settings-left real-settings">
+                                  <h1 class="title" style="text-align: center;"> Settings</h1>
+                                    <div class="title" style="text-align: center;">Warning...Be careful with the settings </div>
+                                    <div class="set open-change " id="single-detail">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_wrench_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">Last Admission Number</div>
+                                            <input type="text" class="settings-input home-settings last_admission">
+                                        </div>
+                                    </div>
+                                    <div class="set" >
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_tree_structure_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">Class streams</div>
+                                            <button class="btn btn-danger open-change" id="stream-tab"style="margin:0">Add</button>
+                                        </div>
+                                    </div>
+                                    <div class="set open-change" id="single-detail" >
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_table_properties_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">No of Lessons in a day</div>
+                                            <input type="text" class="settings-input home-settings day_lessons">
+                                        </div>
+                                    </div>
+                                    <div class="set open-change" id="single-detail" >
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_calendar_14_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">No of Weeks per term</div>
+                                            <input type="text" class="settings-input home-settings term_weeks">
+                                        </div>
+                                    </div>
+                                    <div class="set" class="">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_math_book_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">All taught subjects</div>
+                                            <button class="btn btn-danger open-change" id="add-subject-tab" style="margin:0">Add</button>
+                                        </div>
+                                    </div>
+                                    <div class="set" class="">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_engage_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">Subject teaching Groups</div>
+                                            <button class="btn btn-danger open-groups"  style="margin:0">Add</button>
+                                        </div>
+                                    </div>
+                                    <div class="set open-change" id="single-detail">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_walking_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">Teachers on duty</div>
+                                            <input type="text" class="settings-input home-settings teachers_on_duty">
+                                        </div>
+                                    </div>
+                                    <div class="set open-change" id="single-detail">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_calendar_14_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">lessons per subject in a week</div>
+                                            <input type="text" class="settings-input home-settings weekly_subject_lesson">
+                                        </div>
+                                    </div>
+                                    <div class="set">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_exam_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text">Configure Exam Grading</div>
+                                            <button class="btn btn-danger open-change" id="grading-tab" style="margin:0">Configure</button>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="set open-change" id="single-detail">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_wednesday_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text"> max lessons per subject in a day</div>
+                                            <input type="text" class="settings-input home-settings">
+                                        </div>
+                                    </div> -->
+
+                                    <div class="set open-change" id="single-detail">
+                                        <div class="set-row">
+                                            <img src="../assets/images/icons8_table_properties_50px.png" alt="" class=" subject-icon">
+                                            <div class="set-text"> Subjects selections starts at</div>
+                                            <select class="x-selector selections_starts_at home-settings"name="" id="" style="margin-top: 0;">
+                                                <option value="form-1">Form-1</option>
+                                                <option value="form-2">Form-2</option>
+                                                <option value="form-3">Form-3</option>
+                                                <option value="form-4">Form-4</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                  
+                              </div>
+                              <div class="settings-right">
+                                  <button class="btn btn-success save-home-settings">Save all and exit</button>
+                                  <button class="btn btn-primary close-settings">Back</button>
+                                <div class="entry-form">
+                                    <div class="entry-tabs">
+                                        <div class="add-entry-tab entry-tab animated">
+                                           <div class="title">Other Settings</div>
+                                           <button class="btn outline open-remarks">Reportcard Comments</button>
+                                           <button class="btn outline open-subjects">Configure Subjects</button>
+                                           <button class="btn outline cancel-entry">Defaults</button>
+                                           
+                                        </div>
+                                        <div class="single-detail entry-tab animated">
+                                           <div class="title">About this</div>
+                                           <div class="helper-text">
+                                               Insert the appropriate values
+                                           </div>
+                                           <button class="btn btn-danger">Ok</button>
+                                        </div>
+                                        <div class="bulk-entry-tab entry-tab animated">
+                                            2
+    
+                                        </div>
+                                        <div class="grading-tab entry-tab animated">
+                                            <div class="grading-table">
+                                                <table>
+                                                    <thead><tr><th>subject</th><th>A starts at</th></tr></thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <button class="btn btn-danger save-grading">Save</button>
+                                        </div>
+                                        <div class="add-group-tab entry-tab animated">
+                                           <div class="title">Create a group</div>
+                                           <div class="inputs" style="margin-top: 10px;">
+                                               <input type="text" placeholder="group name" class="group-input" style="margin-top: 10px;">
+                                           <select class="x-selector subjects-selector subject-1"name="" id="">
+                                            <option value="">none</option>
+                                        </select><br>
+                                        subject 1 <br>
+                                        <select class="x-selector subjects-selector subject-2"name="" id="">
+                                            <option value="">none</option>
+                                        </select>
+                                        <br>
+                                        subject 2 <br>
+                                        <select class="x-selector subjects-selector subject-3"name="" id="">
+                                            <option value="">none</option>
+                                        </select>
+                                        <br>
+                                        subject 3
+                                    </div>
+                                    <button class="btn btn-danger save-group">save</button>
+                                        </div>
+                                        <div class="grouping-tab entry-tab animated">
+                                            <div class="title">Subject Groups(taught at the same time)</div>
+                                           <div class="groups">
+                                               
+                                           </div>
+                                            <button class="btn outline open-change" id="add-group-tab"> Add group</button>
+                                        </div>
+                                        <div class="add-subject-tab entry-tab animated">
+                                            <div class="title">Subjects</div>
+                                            <div class="sub-table" style=" height:200px; overflow: auto;">
+                                            <table style="width: 100%;">
+                                                <thead><tr><th>Subject Name</th><th>Has Double class</th><th>Elective</th></tr></thead>
+                                                
+                                                <tbody></tbody>
+                                                
+                                            </table></div>
+                                            <div class="inputs" style="margin-top: 20px;">
+                                                <input type="text" placeholder="Add subject" class="subject-input" ><br>
+                                               
+                                                <button class="btn btn-danger add-subject" style="margin-top:0px;">Add</button><br> <br>
+                                                <button class="btn btn-primary save-subjects" style="margin-top:0px;">Save all</button>
+                                            </div>
+    
+                                        </div>
+                                        <div class="stream-tab entry-tab animated">
+                                           <div class="title">Streams</div>
+                                           <ol class="all-streams">
+                                              
+                                           </ol>
+                                           <div class="inputs">
+                                               <input type="text" placeholder="Add stream" class="stream-input">
+                                               <button class="btn btn-danger save-stream">add</button>
+                                           </div>
+    
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                               </div>
+                              </div>
+                          </div>
+
+                            <!-- editing from here -->
+
+                        <div class="insert-marks-tab">
+                            <div class="results-content" >
+                                <div class="tab-left">
+                                    <div class="x-selectors">
+                                        
+                                        <select class="x-selector res-form-selector"name="" id="">
+                                            <option value="">Select form</option>
+                                             <option value="form-1">Form-1</option>
+                                             <option value="form-2">form-2</option>
+                                             <option value="form-3">form-3</option>
+                                             <option value="form-4">form-4</option>
+                                            
+                                         </select>
+                                         <select class="x-selector res-stream-selector"name="" id="stream-selector">
+                                            <option value="">Select Class</option>
+                                             <option value="eng">south</option>
+                                             <option value="ksw">north</option>
+                                            
+                                         </select>
+                                    <select class="x-selector subjects-selector res-subject-selector"name="" id="">
+                                        <option value="">Select subject</option>
+                                        
+                                    </select>
+
+                                </div> 
+                             <div class="table-part">
+                                 <div class="title table-title" style="text-align:center;margin-bottom:5px">Ensure the above are selected <span style="color: rgb(40, 173, 226)"> correctly</span>  before filling </div>
+                             <div class="entry-table">
+                                  <table>
+                                      <thead>
+                                          <tr class="one-paper"><th>Adm</th><th>First Name</th><th>Last Name</th><th>X/100</th><th>Points</th></tr>
+                                          <tr class="two-paper"><th>Adm</th><th>First Name</th><th>Last Name</th><th>paper1</th><th>paper2</th><th>total</th></tr>
+                                          <tr class="three-paper"><th>Adm</th><th>First Name</th><th>Last Name</th><th>paper2</th><th>paper2</th><th>paper3</th><th>total</th></tr>
+
+                                          </thead>
+                                     <tbody></tbody>
+                                    </table>
+                                 
+                             </div><div class="action-buttons">
+                                <button disabled class="tab-btn btn-primary finalize-entries disabled">finalize</button>
+                                     <button disabled class="tab-btn btn-danger delete-entry disabled">delete</button>
+                                     <!-- <button disabled class="tab-btn btn-danger clear-all-entry disabled">clear all</button> -->
+                                     <button disabled class="tab-btn btn-danger print-entry disabled">print</button>
+                                    
+                                 </div>
+                             </div>
+                             <div class="table_count"> count: <span class="count_value">0</span></div>
+                             </div>
+                                <div class="tab-right">
+                                 <div class="rn"><div class="lv"><div class="cc">
+                                     <select class="x-selector entry-mode"name="" id="">
+                                         <option value="1">One by One</option>
+                                         <option value="2">Excel file</option>
+                                        
+                                     </select></div></div>
+                                    <button class="tab-btn btn-danger open-finalized" style="margin-top: 20px;">All Results</button>
+                                 </div>
+                                 <div class="entry-form">
+                                     <div class="entry-tabs">
+                                         <div class="add-entry-tab entry-tab animated">
+                                             <div class="title insert-title">Insert/Update</div>
+                                             <div class="inputs" style="margin-top: 0px;">
+                                               <div class="error">Some fields are blank</div>
+                                                <select class="x-selector paper-selector add-input"name="" id="">
+                                                    <option value="practicals">select paper</option>
+                                                   
+                                                </select><br><br> 
+                                             <input type="text" placeholder="ADM" class="clearable add-input">
+                                             <input type="text" placeholder="entry" class="clearable add-input">
+                                             <input type="text" placeholder="Out of" class="add-input"> 
+                                             <button disabled class="btn btn-primary save-entry disabled" value="save">Save</button>
+                                            </div>
+                                             <button class="btn btn-danger close-settings">Exit</button>
+                                         </div>
+                                         <div class="update-entry-tab entry-tab animated" style="background-color: rgb(220, 226, 250);">
+                                             <div class="title">Edit chemistry-pp1 5697</div>
+                                             <div class="inputs">
+                                             <input type="text" placeholder="ADM">
+                                             <input type="text" placeholder="entry">
+                                         </div>
+                                             <button class="btn btn-primary update-entry">Update</button>
+                                             <button class="btn btn-danger cancel-entry">back</button>
+                                         </div>
+                                         <div class="bulk-entry-tab entry-tab animated">
+                                            <div class="title">Upload Results </div>
+                                            <div class="helper-text">
+                                                The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                                Please don't edit the sample
+                                            </div>
+                                           
+                                            <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                            <br> <select class="x-selector pp-sel"name="" id="">
+                                                <option value="paper1">paper1</option>
+                                                <option value="paper1">paper2</option>
+                                                <option value="paper1">practical</option>
+                                                <option value="paper1">writing</option>
+                                               
+                                               
+                                            </select><br>
+                                           
+                                             <button disabled class="btn btn-primary pick-file disabled">Pick an Excel file</button>
+                                         </div>
+                                     </div>
+                                 </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="view-finalized-tab">
+                            <span class="x-selectors">
+                                <div class="search">
+                                    <img src="../assets/images/icons8_search_50px.png" alt="" class="search-icon">
+                                    <input type="text" id="search-student" placeholder="search student">
+                                </div>
+                                <select class="x-selector form-selector"name="" id="">
+                                    <option value="form-1">Form 1</option>
+                                    <option value="form-2">form 2</option>
+                                    <option value="form-3">Form 3</option>
+                                    <option value="form-4">form 4</option>
+                                    
+                                </select>
+                                <select class="x-selector stream-selector"name="" id="stream-selector">
+                                    
+                                </select>
+                                <select class="x-selector registered-exams-selector"name="" >
+                                   <option value="">This term</option> 
+                                </select>
+                                <button class=" tab-btn  btn-primary print_finalized" style="margin-top: 20px;"> print</button>
+                             <button style="margin-top: 20px;" class="close-settings btn btn-danger">Back</button>
+                            </span>
+                               
+
+                                <div class="table-view all-results" style="height: 530px;">
+                                    <div class="title results-title">Results</div>
+                                    <table style="width: 100%;">
+                                    <thead><tr class="title-row"></tr></thead>
+                                    <tbody></tbody>
+                                </table>
+                                </div>
+
+                        </div>
+                        <div class="selections-tab">
+
+                        <div class="results-content">
+                            <div class="tab-left">
+                                <div class="x-selectors">
+                                    <div class="search">
+                                        <img src="../assets/images/icons8_search_50px.png" alt="" class="search-icon">
+                                        <input type="text" id="search-student" placeholder="search student">
+                                    </div>
+                                    <select class="x-selector top-form-selector"name="" id="">
+                                     <option value="form-1">Form 1</option>
+                                     <option value="form-2">form 2</option>
+                                     <option value="form-3">form 3</option>
+                                     <option value="form-4">form 4</option>
+                                    
+                                 </select>
+                                 <select class="x-selector top-class-selector"name="" id="stream-selector">
+                                     <option value="">south</option>
+                                     <option value="">north</option>
+                                    
+                                 </select>
+                                </div> 
+                         
+                         <div class="table-part">
+                             <div class="title students-title" style="text-align: center;">Students</div>
+                         <div class="entry-table">
+                              <table>
+                                  <thead>
+                                      <tr><th>Adm</th><th>First Name</th><th>Last Name</th><th>Subjects_done</th></tr>
+                                 </thead>
+                                 <tbody></tbody>
+                             </table>
+                             
+                         </div><div class="action-buttons">
+                            <button disabled class="tab-btn btn-danger disabled d ">Print</button>
+                                 <button class="tab-btn btn-primary change-entry">Statistics</button>
+                             </div>
+                         </div>
+                         </div>
+                            <div class="tab-right">
+                                <button  class="btn btn-primary close-settings" style="margin-top: 20px;">back</button>
+                             
+                             <div class="entry-form">
+                                 <div class="entry-tabs">
+                                     <div class="add-entry-tab entry-tab animated">
+                                        <div class="title">Assing subjects</div>
+                                        <div class="inputs">
+                                            <div class="error">Some fields are blank</div>
+                                            <input type="text" placeholder="Adm">
+                                            <div class="title">subjects done(electives)</div>
+                                            <table class="selections-table" style="width:100% ; ">
+                                                <tbody>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <button  disabled class="btn btn-primary update-selection disabled d">Update</button>
+
+                                     </div>
+                                     <div class="update-entry-tab entry-tab animated">
+                                         <select class="x-selector">
+                                            <option value="form-1">form 1</option>
+                                            <option value="form-2">form 2</option>
+                                            <option value="form-3">form 3</option>
+                                            <option value="form-4">form 4</option>
+                                         </select>
+                                         <button class="tab-btn btn-danger cancel-entry">Back</button>
+                                         <div class="pie-sect" style="height: 250px;">
+                                             <canvas id="counts" height="300" style="margin:auto"></canvas>
+                                         </div>
+                                        
+                                     </div>
+                                     <div class="bulk-entry-tab entry-tab animated">
+                                         <div class="title">chemistry-pp1 form-1 south </div>
+                                         <div class="helper-text">
+                                             the upload file Must be in <span class="excell-format">the sample's</span>  format
+                                         </div>
+                                         <button class="tab-btn btn-success">Excel sample example</button>
+                                         <br><br>
+                                          <button class="tab-btn btn-primary">pick pre-filled excell</button><br>
+                                         <button class="btn btn-danger cancel-entry">cancel</button>
+ 
+                                     </div>
+                                 </div>
+                             </div>
+                            </div>
+                         </div>
+
+
+
+                        </div>
+
+                        <div class="remarks-tab">
+                          
+                            <button class="btn btn-primary close-settings" style="margin-left: 20%;">Back</button>
+                            <button class="btn outline open-settings">All settings</button>
+                            <div class="table-part" style="margin-left: 20%;">
+                                <div class="title " style="text-align: center;">Report Card Auto-remarks</div>
+                                
+                                <div class="entry-table ">
+                                     <table>
+                                         <thead>
+                                       <tr ><th>Points</th> <th>Remarks</th> </tr>
+                                         </thead>
+                                         <tbody></tbody>
+                                    </table>
+                                    
+                                </div><div class="action-buttons">
+                                        <button class="tab-btn btn-primary save-remarks close-settings">Save and exit</button>
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="view-term-results-tab">
+                            <span class="x-selectors">
+                                <div class="search" style="display:none">
+                                    <img src="../assets/images/icons8_search_50px.png" alt="" class="search-icon">
+                                    <input type="text" id="search-student" placeholder="search student">
+                                </div>
+                                <select class="x-selector form-selector"name="" id="">
+                                    <option value="form-1">Form 1</option>
+                                    <option value="form-2">form 2</option>
+                                    <option value="form-3">Form 3</option>
+                                    <option value="form-4">form 4</option>
+                                    
+                                </select>
+                                <select class="x-selector stream-selector"name="" id="stream-selector">
+                                    
+                                </select>
+                                <select class="x-selector term-sel"name=" " >
+                                   <option value="term-1-">Term-1</option> 
+                                   <option value="term-2-">Term-2</option> 
+                                   <option value="term-3-">Term-3</option> 
+                                </select>
+                                <input type="text" class="year_input" placeholder="Year" style="margin-bottom: 0; margin-top: 20px;  border: 2px solid #302655; width:100px; height: 23px; text-align: center;font-size: large;">
+                                
+                                <button class=" tab-btn  btn-primary print_term_results" style="margin-top: 20px;"> print</button>
+                             <button style="margin-top: 20px;" class="close-settings btn btn-danger">Back</button>
+                            </span>
+                               
+
+                                <div class="table-view all-results" style="height: 530px;">
+                                    <div class="title results-title">Results</div>
+                                    <table style="width: 100%;">
+                                    <thead>
+                                        <tr class="title-row"><th rowspan="2">Adm</th><th  rowspan="2">First_name</th><th  rowspan="2">Middle_name</th><th colspan="2">End</th><th colspan="2">Opener</th><th colspan="2">Mid</th> <th colspan="3">Average</th> <th rowspan="2">no</th></tr>
+                                        <tr class="title-row2"> <th>total</th> <th>points</th> <th>total</th> <th>points</th> <th>total</th> <th>points</th> <th>total</th> <th>points</th><th>Grade</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+
+                        </div>
+
+                        <div class="view-groups-tab">
+                            <div class="results-content">
+                                <div class="tab-left">
+                                    <div class="x-selectors">
+                                        <button class="btn btn-primary close-settings" style="margin-top: 20px;">Back</button>
+                                        <button class="btn outline open-subjects" style="margin-top: 20px;">Teacher and classes</button>
+                                   </div> 
+                             
+                             <div class="table-part">
+                                 <div class="title" style="text-align: center;">Timetable subjects</div>
+                             <div class="entry-table">
+                                  <table>
+                                      <thead>
+                                           <tr class="title-row"><th >form 1</th> <th>form 2</th><th >form 3</th> <th>form 4</th></tr>
+                                        </thead>
+                                   <tbody>
+                                       <tr>
+                                           <td><ul class="f1-subjs"></ul></td>
+                                           <td><ul class="f2-subjs"></ul></td>
+                                           <td><ul class="f3-subjs"></ul></td>
+                                           <td><ul class="f4-subjs"></ul></td>
+                                       </tr>
+                                   </tbody>
+                                 </table>
+                                 
+                             </div><div class="action-buttons">
+                                    <button disabled class="tab-btn btn-danger ungroup-class disabled">Ungroup</button>
+                                     <button disabled  class="tab-btn btn-danger change-entry disabled ">group</button>
+                                   
+                                     <!-- <button class="tab-btn btn-primary change-entry">Make double</button> -->
+                                 </div>
+                             </div>
+                             </div>
+                                <div class="tab-right">
+                                 
+                                 <div class="entry-form">
+                                     <div class="entry-tabs">
+                                         <div class="add-entry-tab entry-tab animated">
+                                            <div class="title" style="margin-bottom: 50px;">Table Key</div>
+                                            <div class="title" style="margin-bottom: 20px;">
+                                                The following indicate
+                                            </div>
+                                            <div class="ind" >
+                                           <div class="shared-ind" >subject</div>
+                                           <div >Students are combined</div>
+                                           </div>
+                                           <div class="ind" >
+                                           <div class="group-ind">subject</div>
+                                           <div >Subject has a double</div>
+                                           </div>
+                                           <div class="title">To combine subjects select them and click group below</div>
+                                           <button class="btn btn-primary cancel-entry">ok</button>
+                                         </div>
+                                         <div class="update-entry-tab entry-tab animated">
+                                            <div class="title">Teaching group</div>
+                                            <div class="helper-text">Create a group from selected </div>
+                                           <div class="error">Type a group name</div>
+                                            <div class="inputs">
+                                               <input type="text" class=" group_name" placeholder="Group name">
+                                           </div>
+                                            <button class="btn btn-primary save-grouping">save</button>
+                                            <button class="btn btn-danger cancel-entry">back</button>
+                                         </div></div>
+                                         <div class="bulk-entry-tab entry-tab animated">
+                                            <div class="title">Upload Results</div>
+                                            <div class="helper-text">
+                                                The upload file Must be in <span class="excell-format">the sample's</span>  format
+                                                Please don't edit the sample
+                                            </div>
+                                            <div class="error">Please enter next terms fees</div>
+                                            <button class="tab-btn btn-success open-sample">Excel sample example</button>
+                                            <br><br>
+                                           
+                                             <button class="btn btn-primary pick-file">Pick an Excel file</button>
+     
+                                         </div>
+                                     </div>
+                                 </div>
+                                </div>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="loader">
+        <input type="hidden" name="" class="selected_exam_type">
+        <div class="load-center">
+        <div class="loading-content">
+            <div class="load-title">Loading...</div>
+            <div class="load-actions">please wait</div>
+            <img src="../assets/images/loading.gif" alt="" class="load-img">
+        </div>
+        <div class="loading-buttons">
+            <button class="tab-btn btn-danger cancel-load" style="margin:0 10px 20px 0">Hide</button>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="../assets/libs/countUp.js"></script>
+<script src="../assets/js/index.js"></script>
+<script src="../assets/js/index_helper.js"></script>
+<script src="../assets/js/results_helper.js"></script>
+<script src="../assets/js/students_helper.js"></script>
+<script src="../assets/js/teachers_helper.js"></script>
+<script src="../assets/js/timetable_helper.js"></script>
+<script src="../assets/js/enrollment_helper.js"></script>
+<script src="../assets/js/perfomance_helper.js"></script>
+<script src="../assets/js/report_helper.js"></script>
+<script src="../assets/js/report_preview.js"></script>
+
+
+
+
+
+</html>

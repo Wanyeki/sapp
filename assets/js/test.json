@@ -1,0 +1,7 @@
+[
+{"no":3,"day":"mon","strm":"south","form":"form-2","subject":"Chemistry","teachers":"mrs Mutisya","double":1,"shared":0,"classes":null},
+{"no":1,"day":"mon","strm":"south","form":"form-2","subject":"phgc","teachers":"mrs Judith,mrs Okwiri,mrs Macharia,mr KAWIRA","double":0,"shared":1,"classes":["east","north","south"]},
+{"no":7,"day":"mon","strm":"south","form":"form-2","subject":"Biology","teachers":"mrs Kahura","double":0,"shared":0,"classes":null},
+{"no":8,"day":"mon","strm":"south","form":"form-2","subject":"agri/bs","teachers":"mr Wafula,mrs Yare","double":1,"shared":1,"classes":["south","north","east"]}
+
+]

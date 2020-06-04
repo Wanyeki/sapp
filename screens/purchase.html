@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body >
+    <div class="ka_tab" style="margin: auto; text-align: center;">
+    <h2 style="color:#F27159 ;">Enter Installation code</h2>
+    <div class="load2" style="color: #fff;">
+<img src="../assets/images/my logo.png" alt="" style="height: 130px; "><br>
+</div>
+ <div class="inputs" style="margin-top: 10px;">
+     <div class="error2" style="display: none;">Invalid Code</div>
+    <input type="text" placeholder="Enter code" style="margin-bottom: 30px;">
+</div>
+
+    <button class="btn bt1 btn-primary" style="margin-bottom: 20px; margin-top: 0;">Submit</button>
+    <button class="btn bt2 btn-danger" style="margin-bottom: 20px; margin-top: 0;">Close</button>
+</div>
+</body>
+<script>
+    const {ipcRenderer} =require('electron')
+document.querySelector('.bt1').addEventListener('click',e=>{
+    code=document.querySelector('input').value;
+    if(code==''){
+     document.querySelector('.error2').style.display='block'
+     document.querySelector('.error2').textContent='Invalid Code'
+    }else{
+    ipcRenderer.send('check:purchase_code',code);
+    document.querySelector('.error2').textContent='Loading'
+    document.querySelector('img').setAttribute('src','../assets/images/loading3.gif')
+    }
+})
+ipcRenderer.on('code:accepted',e=>{
+    document.querySelector('img').setAttribute('src','../assets/images/success.jpeg')
+    document.querySelector('.error2').style.display='block'
+    document.querySelector('.error2').textContent='Code accepted'
+})
+ipcRenderer.on('no:internet',e=>{
+    document.querySelector('img').setAttribute('src','../assets/images/no_int.gif')
+    document.querySelector('.error2').style.display='block'
+    document.querySelector('.error2').textContent='No internet'
+
+})
+ipcRenderer.on('invalid:code',e=>{
+    document.querySelector('.error2').style.display='block'
+    document.querySelector('.error2').textContent='Invalid Code'
+})
+document.querySelector('.bt2').addEventListener('click',e=>{
+    ipcRenderer.send('close:purchase');
+})
+
+</script>
+</html>

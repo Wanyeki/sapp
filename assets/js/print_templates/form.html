@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <style>
+       *{
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin:0;
+    text-align: center;
+       }
+.logo-image{
+    height:100px;
+    width:100px;
+}
+small{
+    font-size: 13px;
+}
+header{
+    margin:0 auto;
+    display: -webkit-box;;
+    display: -webkit-flex;
+    -webkit-flex-wrap:wrap;
+    display:flex;
+    flex-wrap: wrap;
+}
+.logo{
+    padding:0 50px;
+
+}
+
+.title-section,.report-details,.comment{
+    display: -webkit-box;;
+    display: -webkit-flex;
+    -webkit-flex-wrap:wrap;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer{
+    display: -webkit-box;;
+    display: -webkit-flex;
+    -webkit-flex-wrap:wrap;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.middle{
+    display: -webkit-box;;
+    display: -webkit-flex;
+    -webkit-flex-wrap:wrap;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.signs{
+    flex-basis: 70%;
+}
+table{
+    width: 100%;
+    font-size: 15px
+}
+th{
+    color:#C6621F;
+}
+.graph,.means{
+    flex-basis: 50%
+}
+.chartContainer{
+    position: absolute;
+    top: 0;
+    left:0;
+}
+table,td,th{
+    border:1px solid #000;
+    border-collapse: collapse;
+}
+section{
+    margin: 6px;
+}
+.graph{
+    display: -webkit-box;;
+    display: -webkit-flex;
+    -webkit-flex-wrap:wrap;
+    display:flex;
+    flex-wrap: wrap;
+ 
+}
+.means{
+    width: 40%;
+}
+/* .graph-sect{
+    flex-basis: 50%;
+} */
+.bars{
+  width:300px;
+  border-left:3px solid #0095FF;
+  border-bottom:3px solid #0095FF;
+}
+
+.width{
+    height:17px;
+    background:#C6621F;
+    margin-bottom: 3px;
+    color: #fff;
+    
+}
+.kcpe{
+    color: red;
+    font-weight: bold;
+}
+.width-red{
+    background:#0095FF;
+}
+.term{
+    text-decoration: underline;
+    height:17px;
+    margin-bottom:3px;
+}
+
+   </style>
+</head>
+<body>
+    <header> 
+        <div class="logo"> <img src="{{image}}" alt="{{image}}" class="logo-image"></div>
+        <div class="school-info" style="margin-left: 10mm;">
+            <h1 class="school-name" style="font-size: 25px;">{{school_info.school_name}}</h1>
+            <h4 class="motto">motto::{{school_info.school_motto}}</h4>
+            <small class="box">{{school_info.school_box}}</small><br>
+            <small class="email">email: <a href="#">{{school_info.school_email}}</a></small><br>
+            <small class="serial-no">sn:vb456h</small>
+        </div>
+    </header>
+    <section class="title-section">
+       <h5 class="title">END OF TERM REPORT:{{term}}</h5>
+       <h5 class="title" style="margin-left: 20mm;">Download time:{{time}}</h5>
+       <h5 class="title"  style="margin-left: 20mm;">Student's copy</h5>
+    </section>
+<hr>
+    <section class="report-details">
+        <div class="rd-left">
+            <h5 class="l-title"> Name: <span class="content">{{student.first_name}} {{student.middle_name}} {{student.sir_name}}</span></h5>
+            <h5 class="l-title"> Class: <span class="content">{{student.form}} {{ student.class}}</span></h5>
+        </div>
+        <div class="rd-right"  style="margin-left: 80mm;">
+            <h5 class="l-title"> Admission No: <span class="content">{{student.adm}}</span></h5>
+            <h5 class="l-title">Parent:<span class="content">{{student.parent_phone}}</span></h5>
+        </div>
+    </section>
+    <section class="results">
+        <table class="results-table" >
+            <tr><th rowspan="2">Subject</th><th>End term</th><th>Opener</th><th>Mid Term</th><th colspan="2">Grade/Points</th><th>Subject rank</th><th rowspan="2">comments</th><th rowspan="2">Initials</th></tr>
+           
+            <tr><th>x/100</th><th>x/100</th><th>x/100</th><th>G</th><th>P</th> <th>x/total</th></tr>
+             {{#each top_table}}
+            <tr><td>{{this.subject}}</td> <td>{{this.Endt}}</td> <td>{{this.Openert}}</td> <td>{{this.Midt}}</td> <td>{{this.grade}}</td> <td>{{this.mean_points}}</td> <td>{{this.rnk}}/{{this.out_of}}</td> <td><i>{{this.remarks}} </i></td> <td>{{this.teacher}}</td></tr>
+            {{/each}}
+            <tr><td colspan="9">_</td></tr>
+            <tr><th>TOTAL</th> <th>{{totals_row.endt}}</th> <th>{{totals_row.openert}}</th> <th>{{totals_row.midt}}</th> <th>{{totals_row.grade}}</th> <th>{{totals_row.points}}</th><th>{{totals_row.rnk}}/{{totals_row.outof}}</th> <th colspan="2"></th></tr>
+
+        </table>
+
+    </section>
+<br>
+    <section class="middle">
+        <div class="means">
+            <table >
+        <tr><th>Term</th><th>Mean Points</th><th>Mean Grade</th><th>Position</th><th>Rank</th></tr>
+        <tr><td>This Term</td><td>{{mid_table0.points}}</td><td>{{mid_table0.grade}}</td><td>{{mid_table0.pos}}/{{mid_table0.class_outof}}</td><td>{{mid_table0.rnk}}/{{mid_table0.form_outof}}</td></tr>
+        <tr><td>Last Term</td><td>{{mid_table1.points}}</td><td>{{mid_table1.grade}}</td><td>{{mid_table1.pos}}/{{mid_table1.class_outof}}</td><td>{{mid_table1.rnk}}/{{mid_table1.form_outof}}</td></tr>
+        <tr><td>KCPE</td><td>{{kcpe_ranks.points}}</td><td>{{kcpe_ranks.grade}}</td><td>{{kcpe_ranks.pos}}/{{kcpe_ranks.class_outof}}</td><td>{{kcpe_ranks.rnk}}/{{kcpe_ranks.form_outof}}</td></tr>
+        <tr><th colspan="2">KCPE:{{kcpe_ranks.kcpe}}</th><th colspan="3">value added:{{val_added}}</th></tr>
+   </table>
+   <div class="comment">
+    <div class="comments">
+        <h4>Class teacher's comments</h4>
+        <br>
+        <i></i>
+        <hr>
+    </div>
+    
+
+</div>
+        </div>
+     <div class="graph-sect">
+           <div class="graph" style="margin-left: 8mm; margin-top: {{g_m_top}}px;">
+            <div class="terms">
+                {{#each g_terms}}
+                <h5 style="font-size: xx-small;" class="term">{{this.term}}</h5>
+                {{/each}}
+                <h5 class="term kcpe">KCPE</h5>
+            </div>
+            <div class="bars">
+               {{#each g_terms}}
+                <div class="width" style="width: {{this.width}}%">{{this.mean_points}}</div>
+                {{/each}}
+                <div class=" width width-red" style="width: {{kcpe_ranks.width}}%">{{kcpe_ranks.points}}</div>
+
+            </div>
+           </div>
+      </div>
+    </section>
+    <h5>Perfomance Track</h5>
+    <section class="P-track">
+<table >
+    <tr><th>class</th>
+        {{#each btm_tab}}
+        <td>{{this.form}}</td>
+        {{/each}}
+    </tr>
+    <tr><th>Year/term</th>
+        {{#each btm_tab}}
+        <td>{{this.term}}</td>
+        {{/each}}
+    </tr>
+
+    <tr><th>Exam</th>
+        {{#each btm_tab}}
+        <td>{{this.exam}}</td>
+        {{/each}}
+    </tr>
+    <tr><th>Mean/Grade</th>
+        {{#each btm_tab}}
+        <td>{{this.points}}</td>
+        {{/each}}
+    </tr>  
+
+</table>
+    </section><br>
+
+    <footer>
+        <div class="signs">
+            
+            <div class="comment">
+                    <div class="comments">
+                            <h5>Principal/Deputy comments</h5>
+                            <i></i><hr>
+                    </div>
+                    <div class="sign"  style="margin-left: 27mm;">
+                            <h5 class="sign">Sign</h5><br>
+                            <hr>
+                        </div>
+                        <div class="sign"  style="margin-left: 27mm;">
+                                <h5 class="sign">Name</h5><br>
+                                <hr>
+                            </div>
+            </div>
+            <div class="comment">
+                    <div class="comments">
+                            <h5>Parent/Guardian comments</h5>
+                            <i></i><hr>
+                    </div>
+                    <div class="sign"  style="margin-left: 25mm;">
+                        <h5 class="sign">Sign</h5><br>
+                        <hr>
+                    </div>
+                    <div class="sign"  style="margin-left: 25mm;">
+                            <h5 class="sign">Name</h5><br>
+                            <hr>
+                        </div>
+            </div>
+        </div>
+        <div class="fees" style="margin-left: 30mm;">
+            <table >
+                <tr><th colspan="2">School Fees</th></tr>
+                <tr><th>Balance</th><td>{{balances.balance}}.00</td></tr>
+                <tr><th>Next Term</th><td>{{balances.next_term}}.00</td></tr>
+                <tr><th>Total</th><th>{{fee_tot}}</th></tr>
+            </table>
+        </div>
+    </footer><br>
+   <hr class="last">
+
+<h5 class="dates">{{term}}</h5>
+</body>
+</html>

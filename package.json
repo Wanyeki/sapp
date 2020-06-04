@@ -1,0 +1,30 @@
+{
+  "name": "schoolapp",
+  "version": "1.0.0",
+  "description": "school management app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Francis Wanyeki",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^2.1.1",
+    "custom-electron-titlebar": "^3.2.2-hotfix62",
+    "electron-packager": "^14.2.1",
+    "genetic-js": "^0.1.14",
+    "handlebars": "^4.7.6",
+    "html-pdf": "^2.2.0",
+    "mysql": "^2.18.1",
+    "pdf-to-printer": "^1.4.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "read-excel-file": "^4.0.6",
+    "update-electron-app": "^1.5.0"
+  },
+  "devDependencies": {
+    "electro": "^2.1.1",
+    "electron": "^8.2.1"
+  }
+}

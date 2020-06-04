@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<style>
+
+.user-management{
+    position:relative;
+    height:420px;
+    width: 400px;
+    text-align: center;
+
+}
+body{
+    background: #534877;
+
+}
+table{
+    width: 100%;
+}
+.create-user,.change-psd{
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #534877;
+}
+.users-table{
+    height: 150px;
+    overflow: auto;
+    color:#fff;
+    background: #7667a7;
+
+}
+.error{
+    display: none;
+}
+
+</style>
+<body>
+    <div class="user-management">
+        
+        <div class="change-psd">
+            <div class="title" style="font-size: 1.2em;">change password</div>
+            <form class="inputs">
+                <div class="error title">New passwords did not match</div><br>
+                <input type="password" placeholder="old-password" class="old-password" required style="border-color:#534877 ;"><br>
+                <input type="password" placeholder="new-password" class="new-password" required style="border-color:#534877 ;"><br>
+                <input type="password" placeholder="confirm-new-password" class="confirm-new-password" required style="border-color:#534877 ;"><br>
+            
+            <input type="submit" value="change" class="btn btn-primary change-psd-btn">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    
+   const electron = require('electron');
+    const {ipcRenderer}=electron;
+     change_psd_btn=document.querySelector('.change-psd-btn');
+    error_field=document.querySelector('.error');
+     change_psd_btn.addEventListener('click',e=>{
+         e.preventDefault()
+         old_psd=document.querySelector('.old-password').value;
+        new_psd=document.querySelector('.new-password').value;
+        con_psd=document.querySelector('.confirm-new-password').value;
+        
+        if(new_psd==con_psd && new_psd!=''&& con_psd!=''&& new_psd!=''){
+            ipcRenderer.send('change:password',{old:old_psd,new:new_psd})
+        }else{
+            error_field.style.display='block'
+            if(new_psd=='' || con_psd==''|| new_psd==''){
+                error_field.textContent='Some fields can\'t be blank!';
+            }
+        }
+
+     })
+
+
+</script>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<style>
+
+.user-management{
+    position:relative;
+    height:420px;
+    width: 400px;
+    text-align: center;
+
+}
+body{
+    background: #534877;
+
+}
+table{
+    width: 100%;
+}
+.create-user,.change-psd{
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #534877;
+}
+.users-table{
+    height: 150px;
+    overflow: auto;
+    color:#fff;
+    background: #7667a7;
+
+}
+.change-psd,.error{display:none}
+
+</style>
+<body>
+    <div class="user-management">
+        <div class="create-user">
+            <div class="title">People who can login</div>
+            <div class="users-table">
+                <table>
+                    <thead><tr><th>id</th> <th>username</th><th>action</th></tr></thead>
+                    <tbody>
+                
+                     </tbody>
+                </table>
+            </div>
+            <div class="inputs" style="margin-top: 30px;">
+                <div class="error title">Some fields are empty</div><br>
+
+                <input type="text" placeholder="Username" class="username" style="border-color:#534877 ;"><br>
+                <input type="text" placeholder="Temporary password" class="password" style="border-color:#534877 ;"><br>
+                <button class="btn btn-danger create-user-btn" style="margin-top: 10px;">Add</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    const electron = require('electron');
+    const {ipcRenderer}=electron;
+    table=document.querySelector('tbody');
+
+//display users
+function display_table(data){
+    table.textContent='';
+    data.forEach(user => {
+        tr=document.createElement('tr');
+        for(i=0;i<3;i++){
+            td=document.createElement('td');
+            if(i==0){td.textContent=user.id}
+            if(i==1){td.textContent=user.username}
+            if(i==2){td.textContent='remove';td.style.cursor='pointer'}
+          tr.appendChild(td)
+
+        }
+        table.appendChild(tr);
+    });
+}
+
+ipcRenderer.on('display:userTable',(e,data)=>{
+   display_table(data);
+   //remove user
+rows=document.querySelectorAll('tr')
+count=0;
+rows.forEach(row=>{
+    if(count>0){
+    row.querySelector('td:nth-child(3)').addEventListener('click',e=>{
+        id=row.querySelector('td').textContent;
+        ipcRenderer.send('remove:user',id)
+    });
+        }
+    count++;
+});
+
+});
+
+
+
+
+ipcRenderer.send('get:users');
+
+
+// create users
+error_field=document.querySelector('.error');
+
+document.querySelector('.create-user-btn').addEventListener('click',e=>{
+    form_data={
+    username:document.querySelector('.username').value,
+    password:document.querySelector('.password').value
+    }
+
+    if(form_data.username!='' && form_data.password != ''){
+        ipcRenderer.send('create:user',form_data);
+        document.querySelector('.username').value='';
+        document.querySelector('.password').value='';
+    }else{
+        error_field.style.display='block'
+    }
+})
+
+</script>
