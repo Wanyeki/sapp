@@ -9,7 +9,7 @@
   "author": "Francis Wanyeki",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "chart.js": "^2.1.1",
     "custom-electron-titlebar": "^3.2.2-hotfix62",
