@@ -16,7 +16,7 @@
     "electron-packager": "^14.2.1",
     "genetic-js": "^0.1.14",
     "handlebars": "^4.7.6",
-    "html-pdf": "^2.2.0",
+    "html-pdf": "^3.0.1",
     "mysql": "^2.18.1",
     "pdf-to-printer": "^1.4.0",
     "phantomjs-prebuilt": "^2.1.16",
