@@ -15,7 +15,7 @@
     "custom-electron-titlebar": "^3.2.2-hotfix62",
     "electron-packager": "^14.2.1",
     "genetic-js": "^0.1.14",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "html-pdf": "^2.2.0",
     "mysql": "^2.18.1",
     "pdf-to-printer": "^1.4.0",
