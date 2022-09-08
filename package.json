@@ -20,7 +20,7 @@
     "mysql": "^2.18.1",
     "pdf-to-printer": "^1.4.0",
     "phantomjs-prebuilt": "^2.1.16",
-    "read-excel-file": "^4.0.6",
+    "read-excel-file": "^4.1.0",
     "update-electron-app": "^1.5.0"
   },
   "devDependencies": {
